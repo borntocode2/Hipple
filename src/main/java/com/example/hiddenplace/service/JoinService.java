@@ -24,7 +24,7 @@ public class JoinService {
         User user = User.builder()
                 .username(requestDto.getUsername())
                 .password(bCryptPasswordEncoder.encode(requestDto.getPassword())) //DB에 비번이 암호화되어 저장됨
-                .role("ROLE_USER")
+                .role("ROLE_ADMIN")
                 .build();
 
         userRepository.save(user);
